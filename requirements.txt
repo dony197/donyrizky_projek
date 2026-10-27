@@ -1,0 +1,18 @@
+streamlit>=1.35
+numpy
+pillow
+
+# Model Keras (.h5) - versi CPU supaya lebih ringan saat deploy
+tensorflow-cpu>=2.16
+
+# Model PyTorch (.pt) - build CPU (jauh lebih kecil dari build CUDA)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+
+# Dipakai hanya jika .pt Anda hasil training YOLO (opsional, sudah membawa opencv).
+# Hapus baris ini jika .pt Anda bukan YOLO.
+ultralytics
+
+# Hanya diperlukan jika memakai versi app.py dengan donut chart / tabel deteksi:
+# pandas
+# plotly
